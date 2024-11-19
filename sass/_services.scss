@@ -1,0 +1,42 @@
+// _services.scss
+.services {
+  background-color: $bg-color;
+  padding: $spacing-lg 0;
+
+  .services__wrapper {
+    @include flex-center(row, space-around);
+
+    .service {
+      @include flex-center(column, center, center);
+      gap: 16px;
+      text-align: center;
+      max-width: 300px;
+
+      img {
+        max-width: 150px;
+        margin-bottom: $spacing-sm;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        color: $text-color;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $text-color;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services__wrapper {
+      gap: 1.5rem;
+      justify-content: center;
+
+      .service {
+        max-width: 100%;
+      }
+    }
+  }
+}

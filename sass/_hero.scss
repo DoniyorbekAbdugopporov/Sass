@@ -1,0 +1,49 @@
+// _hero.scss
+.hero {
+  width: 100%;
+  background-color: $bg-color;
+  padding: $spacing-lg 0;
+
+  .hero_wrapper {
+    width: 100%;
+    @include flex-center(flex, space-between);
+
+    &--left {
+      width: 50%;
+      h1 {
+        font-size: 3rem;
+        color: $text-color;
+      }
+
+      p {
+        margin: $spacing-sm 0;
+        color: $text-color;
+        font-size: 1.3rem;
+      }
+
+      .btn {
+        @include button-style();
+      }
+    }
+
+    &--right {
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero_wrapper {
+      flex-direction: column;
+      text-align: center;
+
+      &--right {
+        img {
+          max-width: 70%;
+        }
+      }
+    }
+  }
+}

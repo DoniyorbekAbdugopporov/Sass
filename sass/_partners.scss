@@ -1,0 +1,29 @@
+// _partners.scss
+.partners {
+  padding: $spacing-lg 0;
+
+  .partners__wrapper {
+    @include flex-center(row, space-between);
+
+    img {
+      max-width: 150px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .partners__wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+}

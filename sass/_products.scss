@@ -1,0 +1,30 @@
+// _products.scss
+.products {
+  width: 100%;
+  padding: $spacing-lg 0;
+  &__wrapper {
+    width: 100%;
+    @include flex-center(row, center, space-between);
+    gap: 100px;
+  }
+
+  .products__info {
+    width: 50%;
+    text-align: left;
+
+    h2 {
+      font-size: 3rem;
+      color: $text-color;
+    }
+  }
+
+  .product__payment {
+    @include flex-center(column, center);
+    gap: $spacing-md;
+
+    .payment__btn {
+      @include button-style();
+      background-color: $primary-color;
+    }
+  }
+}

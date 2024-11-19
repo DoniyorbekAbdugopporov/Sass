@@ -1,0 +1,56 @@
+// _traffic.scss
+.traffic {
+  background-color: $bg-color;
+  padding: $spacing-lg 0;
+
+  .traffic__cards {
+    @include flex-center(row, space-around);
+
+    .card__item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+      padding: $spacing-md;
+      max-width: 300px;
+      height: 400px;
+      text-align: center;
+      @include flex-center(column, center, center);
+      gap: 10px;
+      transition: 0.3s;
+      h2 {
+        color: $primary-color;
+      }
+
+      p {
+        color: $text-color;
+        margin: $spacing-sm 0;
+      }
+
+      .traffic__btn {
+        @include button-style(#ddd, $primary-color);
+      }
+
+      .traffic__btn:hover {
+        @include button-style($secondary-color, $primary-color);
+        color: #fff;
+      }
+    }
+    // .card__item:hover {
+    //   background: $secondary-color;
+    //   color: #fff;
+    // }
+  }
+
+  @media (max-width: 768px) {
+    .traffic__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .card__item {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

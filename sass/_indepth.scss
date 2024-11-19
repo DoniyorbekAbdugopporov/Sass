@@ -1,0 +1,60 @@
+// _indepth.scss
+.indepth {
+  padding: $spacing-lg 0;
+
+  .indepth__wrapper {
+    width: 100%;
+    @include flex-center(flex, space-between);
+
+    &--left {
+      width: 50%;
+      h2 {
+        font-size: 3rem;
+        color: $text-color;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin: $spacing-sm 0;
+        color: $text-color;
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &--right {
+      img {
+        padding-right: 50px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .indepth__wrapper {
+      flex-direction: column;
+
+      &--right {
+        img {
+          max-width: 80%;
+        }
+      }
+
+      &--left {
+        text-align: center;
+
+        h2,
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
