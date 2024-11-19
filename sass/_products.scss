@@ -19,7 +19,7 @@
   }
 
   .product__payment {
-    @include flex-center(column, center);
+    @include flex-center(row, center);
     gap: $spacing-md;
 
     .payment__btn {
